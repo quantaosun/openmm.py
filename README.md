@@ -4,7 +4,7 @@
 
 https://github.com/pablo-arantes has developed an excellent Colab workflow to run the simulation. This repo is designed for people who want to do a general molecular dynamic simulation locally using OpenMM with Amber inputs. 
 
-With a GPU like RTX4090, the speed can easily achieve > 400 ns/day for a typical kinase protein-small molecule complex.
+With a GPU like RTX4090, the speed can easily achieve around 300 ns/day for a typical kinase protein-small molecule complex.
 
 ![image](https://github.com/quantaosun/cheat_MD/assets/75652473/0bb7c2b4-4eee-4c93-905b-1dd0d55c3243)
 
