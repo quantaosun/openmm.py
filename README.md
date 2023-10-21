@@ -13,10 +13,10 @@ OpenMM need to be installed in a Linux platform
 
 ## Steps
 
-1. https://colab.research.google.com/github/pablo-arantes/Cloud-Bind/blob/main/GNINA.ipynb#scrollTo=wyzlRC-sBY3J to generate receptor.pdb and Docked1.pdb
+1. https://colab.research.google.com/github/pablo-arantes/Cloud-Bind/blob/main/GNINA.ipynb#scrollTo=wyzlRC-sBY3J to generate ```receptor.pdb``` and ```Docked1.pdb```
    (or you can use Schrodinger/Maestro to do so)
 
-2. https://github.com/pablo-arantes/making-it-rain to generate SYS_gaff2.prmtop and SYS_gaff2.crd
+2. Upload the 2 files from step1, to https://github.com/pablo-arantes/making-it-rain to generate ```SYS_gaff2.prmtop``` and ```SYS_gaff2.crd```
    (or you could use local Ambertools to do so)
 3. Download this repo to a local Linux with OpenMM installed, and copy the two files in step2, to the same folder as the Python script provided in this repo.
 
