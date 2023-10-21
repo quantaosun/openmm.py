@@ -15,13 +15,10 @@ OpenMM need to be installed in a Linux platform
 
 1. https://colab.research.google.com/github/pablo-arantes/Cloud-Bind/blob/main/GNINA.ipynb#scrollTo=wyzlRC-sBY3J to generate receptor.pdb and Docked1.pdb
    (or you can use Schrodinger/Maestro to do so)
-   ```
-   no matter what docking software to use, please make sure the receptor was saved as receptor.pdb, and the best-docked ligand as Docked1.pdb
 
-   ```
-3. https://github.com/pablo-arantes/making-it-rain to generate SYS_gaff2.prmtop and SYS_gaff2.crd
+2. https://github.com/pablo-arantes/making-it-rain to generate SYS_gaff2.prmtop and SYS_gaff2.crd
    (or you could use local Ambertools to do so)
-5. Download this repo to a local Linux with OpenMM installed, and copy the two files in step2, to the same folder as the Python script provided in this repo.
+3. Download this repo to a local Linux with OpenMM installed, and copy the two files in step2, to the same folder as the Python script provided in this repo.
 
 ### Inputs 
 ```
@@ -44,6 +41,13 @@ prot_lig_prod.log
 stdout  
 ```
 ```prod_lig_1.pdb``` is the final simulated structure, ```prot_lig_prod.dcd``` is the trajectory file.
+
+### Visualisation
+
+In Pymol, load ```prod_lig_1.pdb``` and ```prot_lig_prod.dcd```
+
+![image](https://github.com/quantaosun/general-openmm/assets/75652473/023217fb-4cd5-4751-9fcc-1437588179ac)
+
 ## Performance
 
 RTX4090: to simulate 100 nanosecond for a typical kinase size protein-ligand complex
