@@ -30,7 +30,7 @@ SYS_gaff2.prmtop
 ### Execute the simulation
 
 ```python prot_lig_openmm.py ```
-It will do a 10 ns equilibration and 50 ns of production by default. You must change the ```prot_lig_openmm.p``` if you want a longer or shorter simulation.
+It will do a 10 ns equilibration and 50 ns of production by default. You must change the ```prot_lig_openmm.py``` if you want a longer or shorter simulation.
 
 ### Output
 
