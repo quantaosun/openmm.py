@@ -64,10 +64,19 @@ dataReporter = StateDataReporter('prot_lig_prod.log', 1000, totalSteps=productio
 # Prepare the Simulation
 
 print('Starting molecular dynamics simulaiton......')
+
 print('############################################################################')
+
 print('##   This script was written by Quantao Sun based on official OpenMM documentation. You can visit Github:quantaosun for more insight. Please cite OpenMM paper, and consider cite my github repo link if used in any publications  ####') 
+
 print('Initialising molecular dynamics....')
+
+print('############################################################################')
+
 print ('With GPU like RTX3080 or above, the simulation speed for a typical kinase protein should be greater than 200 ns/day')
+
+print('############################################################################')
+
 
 import time
 # Sleep for 10 seconds
