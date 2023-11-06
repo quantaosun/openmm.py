@@ -109,18 +109,27 @@ then 50 ns of production.
 At the end of this simulation, the final frame will be saved as
 ###############################################################
 
-##########          prot_lig_1.pdb               #######, 
+##########          prot_lig_1.pdb               ##############
 
 the trajectory will be saved as 
 
-###########          prot_lig.dcd                #######
+###########          prot_lig.dcd                ##############
 
 ##################################################################
 You can view the trajectory with Pymol by loading 
 
-###########         SYS_gaff2.prmtop            #########
+###########         SYS_gaff2.prmtop            ##################
 
 and the trajectory file.
+
+
+#     #      #     #     ######    #    # #     # 
+#     #      ##    #     #         #    #  #   #
+#     #      #  #  #     ######    #   #   #  #
+#     #      #    ##          #      #      #   
+ #####       #     #    #######      #      #
+
+
 """
 
 print(content)
