@@ -17,7 +17,7 @@ OpenMM need to be installed in a Linux platform
 
 2. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/quantaosun/pl3_gmx_mmpbsa/HEAD), click to wait loading finished.
 3. Upload the 2 files from step1,  to generate ```SYS_gaff2.prmtop``` and ```SYS_gaff2.crd```, note, the binder link is not guaranteed if high visit volume, if not accessible you can use https://github.com/pablo-arantes/making-it-rain
-5. Download this repo to a local Linux with OpenMM installed, and copy the two files in step2, to the same folder as the Python script provided in this repo.
+5. Download this repo to a local Linux with OpenMM installed (If you haven't got one, you could create one by the environment file attached in this repo), and copy the two files in step2, to the same folder as the Python script provided in this repo.
 
 ### Inputs 
 ```
