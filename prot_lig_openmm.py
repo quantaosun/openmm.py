@@ -65,9 +65,9 @@ dataReporter = StateDataReporter('prot_lig_prod.log', 1000, totalSteps=productio
 
 print('Starting molecular dynamics simulaiton......')
 print('############################################################################')
-print('##   This script written by Quantao Sun based with official OpenMM documentation/Github:quantaosun. Please cite OpenMM paper, and consider cite my github repo link if used in any publications  ####') 
+print('##   This script written by Quantao Sun based with official OpenMM documentation. Github:quantaosun. Please cite OpenMM paper, and consider cite my github repo link if used in any publications  ####') 
 print('Initialising molecular dynamics....')
-print ('With GPU like RTX3080 or above, the simulaiton speed for a typical kinase protein should be greater than 200 ns/day')
+print ('With GPU like RTX3080 or above, the simulation speed for a typical kinase protein should be greater than 200 ns/day')
 
 import time
 # Sleep for 10 seconds
@@ -104,12 +104,12 @@ these three parameters inside the .py file
 
 If you have not changed anything the default setting is 10000
 steps of minimisation, followed by 10 ns of equilibration and 
-then 50 ns of produciton.
+then 50 ns of production.
 
 At the end of this simulation, the final frame will be saved as
-prot_lig_1.pdb, the trajecotry will be saved as prot_lig.dcd.
+prot_lig_1.pdb, the trajectory will be saved as prot_lig.dcd.
 
-You can view the trajectory with pymol by loading SYS_gaff2.prmtop
+You can view the trajectory with Pymol by loading SYS_gaff2.prmtop
 and the trajectory file.
 """
 
