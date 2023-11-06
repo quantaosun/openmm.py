@@ -31,10 +31,6 @@ SYS_gaff2.prmtop
 ```python prot_lig_openmm.py ```
 It will do a 10 ns equilibration and 50 ns of production by default. You must change the ```prot_lig_openmm.py``` if you want a longer or shorter simulation.
 
-<img width="1153" alt="image" src="https://github.com/quantaosun/general-openmm/assets/75652473/fb20397d-134f-417f-b5d0-fc01d902fb71">
-
-A typical RTX4090 gives a speed of ~500 ns/day.
-
 
 ### Output
 
