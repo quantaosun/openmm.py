@@ -12,7 +12,7 @@ OpenMM need to be installed on a Linux platform
 
 ## Steps
 
-1.  generate ```receptor.pdb``` and ```Docked1.pdb``` with  Schrodinger/Maestro, or Autodock vina
+1.  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/quantaosun/webdock/HEAD?labpath=webdock_v.0.0.2.ipynb) generate ```receptor.pdb``` and ```Docked1.pdb```, or with  Schrodinger/Maestro, or Autodock vina, or any other docking software you could have access to.
 
 2. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/quantaosun/pl3_gmx_mmpbsa/HEAD), click to wait loading finished.
 3. Upload the 2 files from step1,  to generate ```SYS_gaff2.prmtop``` and ```SYS_gaff2.crd```, note, the binder link is not guaranteed if there is high visit volume, if not accessible you can use https://github.com/pablo-arantes/making-it-rain
