@@ -12,9 +12,9 @@ OpenMM need to be installed on a Linux platform
 
 ## Steps
 
-1.  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/quantaosun/webdock/HEAD?labpath=webdock_v.0.0.2.ipynb) generate ```receptor.pdb``` and ```Docked1.pdb```, or with  Schrodinger/Maestro, or Autodock vina, or any other docking software you could have access to.
+1.  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/quantaosun/webdock/HEAD?labpath=webdock_v.0.0.2.ipynb) generate ```receptor.pdb``` and ```Docked1.pdb```, or with  Schrodinger/Maestro, or Autodock vina, or any other docking software you could have access to. Alternatively, you can always to install webdock (https://github.com/quantaosun/webdock) into your local Linux, then generate the docked results.
 
-2. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/quantaosun/pl3_gmx_mmpbsa/HEAD), click to wait loading finished.
+2. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/quantaosun/pl3_gmx_mmpbsa/HEAD), click to wait loading finished. Alternatively, you can install this repo comes with ambertools (https://github.com/quantaosun/pl3_gmx_mmpbsa)  into your local Linux, then generate the md inputs files as described in step 3.
 3. Upload the 2 files from step1,  to generate ```SYS_gaff2.prmtop``` and ```SYS_gaff2.crd```, note, the binder link is not guaranteed if there is high visit volume, if not accessible you can use https://github.com/pablo-arantes/making-it-rain
 5. Download this repo to a local Linux with OpenMM installed (If you haven't got one, you could create one by the environment file attached in this repo), and copy the two files in step2, to the same folder as the Python script provided in this repo.
 
