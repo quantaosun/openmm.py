@@ -86,6 +86,37 @@ equilibrationSteps = 4000000  # 2 ns
 ##################################################
 ```
 
+## Analysis
+
+```
+>>> import mdtraj
+>>> from __future__ import print_function
+>>> import mdtraj as md
+>>> crystal_fn = 'data/native.pdb'
+>>> crystal_fn = './prod_lig_1.pdb'
+>>> trajectory_fn = './prot_lig_prod.dcd'
+>>> crystal = md.load(crystal_fn)
+>>> trajectory = md.load(trajectory_fn, top=crystal)
+>>> trajectory
+<mdtraj.Trajectory with 25 frames, 56495 atoms, 17382 residues, and unitcells at 0x7fdb3bc91c10>
+>>> rmsds_to_crystal = md.rmsd(trajectory, crystal, 0)
+>>> heavy_atoms = [atom.index for atom in crystal.topology.atoms if atom.element.symbol != 'H']
+>>> heavy_rmds_to_crystal = md.rmsd(trajectory, crystal, 0, atom_indices=heavy_atoms)
+>>> from matplotlib import pyplot as plt
+>>> plt.plot(trajectory.time, rmsds_to_crystal, 'r', label='all atom')
+[<matplotlib.lines.Line2D object at 0x7fdaf4842f10>]
+>>> plt.plot(trajectory.time, heavy_rmds_to_crystal, 'b', label='heavy atom')
+[<matplotlib.lines.Line2D object at 0x7fdaf485c1f0>]
+>>> plt.legend()
+<matplotlib.legend.Legend object at 0x7fdaf48a94c0>
+>>> plt.title('RMSDs to crystal')
+Text(0.5, 1.0, 'RMSDs to crystal')
+>>> plt.xlabel('simulation time (ps)')
+Text(0.5, 0, 'simulation time (ps)')
+>>> plt.ylabel('RMSD (nm)')
+Text(0, 0.5, 'RMSD (nm)')
+```
+
 ## Reference
 1. https://openmm.org/documentation
 2. https://github.com/pablo-arantes
