@@ -5,3 +5,6 @@ utilised the last PDB as a reference instead of the initial one. It doesn't matt
 
 <img width="681" alt="image" src="https://github.com/quantaosun/openmm.py/assets/75652473/8f82d4c7-98ab-41de-8736-d2f41056ef77">
 
+![image](https://github.com/quantaosun/openmm.py/assets/75652473/2ac4bdd0-615a-45e4-b917-5085fa2a08d4)
+
+
