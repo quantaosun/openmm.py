@@ -1,5 +1,7 @@
 ## Analysis
 
+- Pymol visualisation, load SYS.pdb, load prot_lig_prod.dcd
+
 ### The recommended analysis tool is Bio3D
 
 - R is free on any Unix-like terminal, you can install it easily.
