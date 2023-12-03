@@ -7,6 +7,27 @@
 - R is free on any Unix-like terminal, you can install it easily.
 - Then, install Bio3D within R
 
+RMSD
+
+![image](https://github.com/quantaosun/openmm.py/assets/75652473/427b9b84-6aeb-498f-95fd-cfd9c94bcfd6)
+
+RMSF
+
+![image](https://github.com/quantaosun/openmm.py/assets/75652473/3bd0fb23-00d2-4c07-8d99-f4a3915007ef)
+
+PCA
+
+![image](https://github.com/quantaosun/openmm.py/assets/75652473/2c6afcd3-698c-4894-9a3c-3cd99fb9a391)
+
+PC1 and PC2(blue), residue-wise distribution
+
+![image](https://github.com/quantaosun/openmm.py/assets/75652473/d9a98098-e48c-438a-88b2-93d1da269bea)
+
+Cross-correlation
+
+![image](https://github.com/quantaosun/openmm.py/assets/75652473/80279b61-8ac3-4768-b9b6-8da847247960)
+
+
 ### Alternatively
 
 
