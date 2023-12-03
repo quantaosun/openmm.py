@@ -4,6 +4,8 @@
 
 ### The recommended analysis tool is Bio3D
 
+http://thegrantlab.org/bio3d/articles/online/traj_vignette/Bio3D_md.html 
+
 - R is free on any Unix-like terminal, you can install it easily.
 - Then, install Bio3D within R
 
