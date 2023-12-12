@@ -1,4 +1,4 @@
-# This script is written by Quantao/quantaosun@gmail.com or Github:quantaosun for OpenMM simulation,2023.
+# This script is written by quantaosun@gmail.com or https://github.com/quantaosun/openmm.py for OpenMM simulation,2023.
 
 from simtk.openmm import *
 from simtk.openmm.app import *
@@ -34,16 +34,11 @@ barostatInterval = 25
 #minimizationSteps = 10000
 #productionSteps = 50000000  # 100 ns
 #equilibrationSteps = 20000000  # 20 ns
-###################################################
-# medium simulation
-#minimizationSteps = 10000
-#productionSteps = 25000000  # 50 ns
-#equilibrationSteps = 10000000  # 10 ns
-###################################################
+##################################################
 # short simulation
-minimizationSteps = 10000
+minimizationSteps = 100000
 productionSteps = 10000000  # 10 ns
-equilibrationSteps = 4000000  # 2 ns
+equilibrationSteps = 5000000  # 5 ns
 ##################################################
 
 platform = Platform.getPlatformByName('CUDA')
@@ -67,13 +62,15 @@ print('Starting molecular dynamics simulaiton......')
 
 print('############################################################################')
 
-print('##   This script was written by Quantao Sun based on official OpenMM documentation. You can visit Github:quantaosun for more insight. Please cite OpenMM paper, and consider cite my github repo link if used in any publications  ####') 
+print('##  https://github.com/quantaosun/openmm.py ####') 
+
+print('############################################################################')
 
 print('Initialising molecular dynamics....')
 
 print('############################################################################')
 
-print ('With GPU like RTX3080 or above, the simulation speed for a typical kinase protein should be greater than 200 ns/day')
+print (' This script should only used in GPU platform, CPU not supported.')
 
 print('############################################################################')
 
@@ -99,37 +96,23 @@ if inpcrd.boxVectors is not None:
 #########################################################
 
 content = """
-# Simulation Options
 ###################################################
-# medium simulation
-minimizationSteps = 10000
-productionSteps = 25000000  # 50 ns
-equilibrationSteps = 10000000  # 10 ns
-###################################################
-##################################################
 
 If you wish to change the simulation time, please modify
 these three parameters inside the .py file
+
 #############################################################
-If you have not changed anything the default setting is 10000
-steps of minimisation, followed by 10 ns of equilibration and 
-then 50 ns of production.
+Default setting: 10000 steps of minimisation, followed by 10 ns 
+of equilibration, 50 ns of production.
 ##############################################################
-At the end of this simulation, the final frame will be saved as
+Results include
 ###############################################################
-
-##########          prot_lig_1.pdb               ##############
-
-the trajectory will be saved as 
-
-###########          prot_lig.dcd                ##############
+##########          prot_lig_mini.pdb               ##############
+##########          prot_lig_equil.pdb              ##############
+##########          prot_lig_prod.pdb               ##############
+###########         prot_lig_prod.dcd               ##############
 
 ##################################################################
-You can view the trajectory with Pymol by loading 
-
-###########         SYS_gaff2.prmtop            ##################
-
-and the trajectory file.
 
 
 #     #      #     #     ######    #    # #     # 
@@ -138,7 +121,7 @@ and the trajectory file.
 #     #      #    ##          #      #      #   
  #####       #     #    #######      #      #
 
-
+This script was written at The University of New South Wales, Sydney.
 """
 
 print(content)
@@ -149,13 +132,27 @@ print(content)
 print('Performing energy minimization...')
 #simulation.minimizeEnergy()
 simulation.minimizeEnergy(maxIterations=minimizationSteps)
+
+print('Saving the last minimised frame as PDB file...')
+
+positions = simulation.context.getState(getPositions=True).getPositions()
+PDBFile.writeFile(topology, positions, open('prot_lig_mini.pdb', 'w'))
+
 simulation.reporters.clear()
+
+time.sleep(10)
 print('##############################################')
 print('Starting Equilibrating...')
 simulation.context.setVelocitiesToTemperature(temperature)
 simulation.reporters.append(equilibrationDataReporter)
 simulation.step(equilibrationSteps) 
+
+print('Saving the last equilibrated frame as PDB file...')
+positions = simulation.context.getState(getPositions=True).getPositions()
+PDBFile.writeFile(topology, positions, open('prot_lig_equil.pdb', 'w'))
+
 simulation.reporters.clear()
+time.sleep(10)
 
 # Production Simulate
 print('##############################################')
@@ -168,5 +165,8 @@ simulation.step(productionSteps)
 print('##############################################')
 # Write the last frame as a PDB file
 print('Saving the last frame as PDB file...')
+
 positions = simulation.context.getState(getPositions=True).getPositions()
-PDBFile.writeFile(topology, positions, open('prod_lig_1.pdb', 'w'))
+PDBFile.writeFile(topology, positions, open('prod_lig_prod.pdb', 'w'))
+time.sleep(5)
+print('Congratulations, your simulation has finished!')
