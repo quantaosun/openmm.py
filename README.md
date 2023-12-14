@@ -87,7 +87,9 @@ equilibrationSteps = 4000000  # 2 ns
 ```
 
 ## Analysis
-You could use the docker image mentioned in the repo, and analyse the results.
+
+- For overall MD quality please see the post-analysis folder for instructions.
+- For protein-ligand interaction analysis, You could use the docker image mentioned in the repo, and analyse the results. Or if you just want to analyse the final PDB complex, you could just use Maestro, Free Maestro etc to generate the 2D interaction diagram.
 
 ## Reference
 1. https://openmm.org/documentation
